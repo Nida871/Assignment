@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial; }
+  body { height: 100vh; background: #f0f2f5; }
+  .dashboard {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr 40px;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+    gap: 10px;
+  }
+  .header { grid-area: header; background: #1a1a2e; color: white; display:flex; align-items:center; padding:0 20px; }
+  .sidebar { grid-area: sidebar; background: white; padding: 20px; }
+  .main { grid-area: main; background: white; padding: 20px; overflow: auto; }
+  .footer { grid-area: footer; background: #1a1a2e; color: white; display:flex; align-items:center; justify-content:center; }
+
+  .sidebar ul { list-style: none; }
+  .sidebar li { padding: 10px 0; border-bottom: 1px solid #eee; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 15px; }
+  .card { background: #eef2ff; padding: 20px; border-radius: 10px; text-align:center; }
+
+  @media (max-width: 700px) {
+    .dashboard {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="dashboard">
+  <div class="header"><b>My Dashboard - Task 38</b></div>
+  
+  <div class="sidebar">
+    <h3>Menu</h3>
+    <ul>
+      <li>📊 Dashboard</li>
+      <li>👤 Users</li>
+      <li>📦 Products</li>
+      <li>⚙️ Settings</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <h2>Dashboard Content</h2>
+    <div class="cards">
+      <div class="card">Total Users: 1,200</div>
+      <div class="card">Sales: ₹50k</div>
+      <div class="card">Orders: 320</div>
+    </div>
+  </div>
+
+  <div class="footer">Footer © 2026</div>
+</div>
+
+</body>
+</html>

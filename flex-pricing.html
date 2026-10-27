@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial; }
+  body { background: #f8f9ff; padding: 40px 20px; }
+  h1 { text-align:center; margin-bottom: 30px; }
+  .pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .price-card {
+    width: 280px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+  }
+  .price-card.featured {
+    border-color: #4a6cf7;
+    transform: scale(1.05);
+  }
+  .price-card h3 { margin-bottom: 10px; }
+  .price { font-size: 36px; color: #4a6cf7; margin: 15px 0; font-weight: bold; }
+  .price-card ul { list-style: none; margin: 20px 0; flex-grow: 1; }
+  .price-card li { padding: 8px 0; color: #555; }
+  .price-card button {
+    padding: 12px;
+    background: #4a6cf7;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: auto;
+  }
+  .featured button { background: #1a1a2e; }
+</style>
+</head>
+<body>
+
+<h1>Choose Your Plan</h1>
+
+<div class="pricing-container">
+  <div class="price-card">
+    <h3>Basic</h3>
+    <div class="price">₹0</div>
+    <ul>
+      <li>✓ 1 Project</li>
+      <li>✓ 5GB Storage</li>
+      <li>✓ Email Support</li>
+    </ul>
+    <button>Start Free</button>
+  </div>
+
+  <div class="price-card featured">
+    <h3>Pro - Popular</h3>
+    <div class="price">₹499</div>
+    <ul>
+      <li>✓ 10 Projects</li>
+      <li>✓ 50GB Storage</li>
+      <li>✓ Priority Support</li>
+      <li>✓ Free Domain</li>
+    </ul>
+    <button>Go Pro</button>
+  </div>
+
+  <div class="price-card">
+    <h3>Enterprise</h3>
+    <div class="price">₹999</div>
+    <ul>
+      <li>✓ Unlimited Projects</li>
+      <li>✓ 500GB Storage</li>
+      <li>✓ 24/7 Support</li>
+    </ul>
+    <button>Contact Us</button>
+  </div>
+</div>
+
+<p style="text-align:center; margin-top:30px;">
+  Used: display:flex, flex-direction:column, flex-grow:1, align-items:stretch, flex-wrap
+</p>
+
+</body>
+</html>

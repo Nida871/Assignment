@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial; }
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a2e;
+    color: white;
+    padding: 15px 30px;
+  }
+  .menu { display: flex; list-style: none; gap: 20px; }
+  .menu a { color: white; text-decoration: none; }
+
+  /* HERO */
+  .hero {
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background: #eef2ff;
+  }
+  .hero-text { flex: 1; }
+  .hero-text h1 { font-size: 42px; margin-bottom: 15px; }
+  .hero-text p { font-size: 18px; color: #555; margin-bottom: 20px; }
+  .hero-text button {
+    padding: 12px 25px;
+    background: #4a6cf7;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  .hero-img { flex: 1; text-align: center; }
+  .hero-img img { width: 80%; max-width: 350px; border-radius: 15px; }
+
+  @media (max-width: 700px) {
+    .hero { flex-direction: column; text-align: center; height: auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo"><b>Brand</b></div>
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Build Fast with Flexbox</h1>
+    <p>Navbar + Hero section using only Flexbox. Fully responsive layout.</p>
+    <button>Get Started</button>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=500" alt="Hero">
+  </div>
+</section>
+
+<p style="text-align:center; margin:20px;">
+  Used: flex:1, justify-content:space-between, align-items:center
+</p>
+
+</body>
+</html>

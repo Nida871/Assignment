@@ -1,0 +1,4 @@
+1. What happened between typing a URL and seeing the page?
+2. When we type a URL in the browser, the browser first asks the DNS server for the IP address of that domain. Then
+   it send an HTTP request to that IP address. The server receives the request and sends back the HTML, CSS and      JavaScript files. Finally, the browser parses and renders those files to display the website to the user.
+   

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial; }
+  body { background: #f5f5f5; padding: 20px; }
+  h1 { text-align:center; margin: 20px 0; }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  }
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .card h3 { margin: 10px 0 5px; }
+  .card p { color: #4a6cf7; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>Auto Responsive Grid - Task 37</h1>
+
+<div class="product-grid">
+  <div class="card"><img src="https://picsum.photos/200/150?random=11"><h3>Shoes</h3><p>₹999</p></div>
+  <div class="card"><img src="https://picsum.photos/200/150?random=12"><h3>Watch</h3><p>₹1999</p></div>
+  <div class="card"><img src="https://picsum.photos/200/150?random=13"><h3>Bag</h3><p>₹799</p></div>
+  <div class="card"><img src="https://picsum.photos/200/150?random=14"><h3>T-Shirt</h3><p>₹499</p></div>
+  <div class="card"><img src="https://picsum.photos/200/150?random=15"><h3>Headphone</h3><p>₹1499</p></div>
+  <div class="card"><img src="https://picsum.photos/200/150?random=16"><h3>Cap</h3><p>₹299</p></div>
+  <div class="card"><img src="https://picsum.photos/200/150?random=17"><h3>Sunglasses</h3><p>₹899</p></div>
+  <div class="card"><img src="https://picsum.photos/200/150?random=18"><h3>Wallet</h3><p>₹399</p></div>
+</div>
+
+<p style="text-align:center; margin-top:20px;">
+  Used: grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+</p>
+
+</body>
+</html>

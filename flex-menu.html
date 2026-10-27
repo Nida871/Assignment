@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4a6cf7;
+    color: white;
+    padding: 15px 20px;
+  }
+  .logo { font-weight: bold; font-size: 20px; }
+  .menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  .menu a { color: white; text-decoration: none; }
+  
+  /* Mobile pe vertical ho jaye */
+  @media (max-width: 600px) {
+    .navbar { flex-direction: column; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">MyLogo</div>
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<p style="text-align:center; margin-top:20px;">
+  Task 31: display:flex, justify-content: space-between, align-items: center
+</p>
+
+</body>
+</html>

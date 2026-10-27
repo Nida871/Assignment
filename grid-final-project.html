@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Grid Project - Module 8</title>
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial; }
+  .page {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 400px auto auto 50px;
+    grid-template-areas:
+      "header"
+      "hero"
+      "features"
+      "gallery"
+      "footer";
+  }
+  .header { grid-area: header; background: #1a1a2e; color: white; display:flex; justify-content:space-between; align-items:center; padding:0 30px; }
+  .header nav { display:flex; gap:20px; list-style:none; }
+  
+  .hero {
+    grid-area: hero;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #4a6cf7, #6a5af9);
+    color: white;
+  }
+  .hero img { width: 80%; border-radius: 15px; justify-self: center; }
+
+  .features {
+    grid-area: features;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background: white;
+  }
+  .feature-card { padding: 20px; background: #f5f7ff; border-radius: 12px; text-align: center; }
+
+  .gallery-section { grid-area: gallery; padding: 40px; background: #f0f2f5; }
+  .gallery-section h2 { text-align: center; margin-bottom: 20px; }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+  .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; }
+
+  .footer { grid-area: footer; background: #1a1a2e; color: white; display:flex; align-items:center; justify-content:center; }
+
+  @media (max-width: 700px) {
+    .hero { grid-template-columns: 1fr; text-align: center; }
+    .gallery { grid-template-columns: repeat(2, 1fr); }
+    .page { grid-template-rows: auto auto auto auto auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header class="header">
+    <b>GridMaster</b>
+    <nav><li>Home</li><li>About</li><li>Contact</li></nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Module 8 - CSS Grid Complete</h1>
+      <p style="margin:15px 0;">Header + Hero + Features + Gallery + Footer - All using Grid. Auto-fit, named areas, nested grids.</p>
+      <button style="padding:10px 20px; border-radius:20px; border:none; background:white; color:#4a6cf7; font-weight:bold;">Explore</button>
+    </div>
+    <img src="https://picsum.photos/400/300?random=99" alt="hero">
+  </section>
+
+  <section class="features">
+    <div class="feature-card"><h3>⚡ Fast</h3><p>Grid is fast layout system</p></div>
+    <div class="feature-card"><h3>📱 Responsive</h3><p>auto-fit makes it responsive</p></div>
+    <div class="feature-card"><h3>🎨 Flexible</h3><p>Named areas & nesting</p></div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Gallery - display:grid + repeat</h2>
+    <div class="gallery">
+      <img src="https://picsum.photos/300/150?random=31">
+      <img src="https://picsum.photos/300/150?random=32">
+      <img src="https://picsum.photos/300/150?random=33">
+      <img src="https://picsum.photos/300/150?random=34">
+      <img src="https://picsum.photos/300/150?random=35">
+      <img src="https://picsum.photos/300/150?random=36">
+      <img src="https://picsum.photos/300/150?random=37">
+      <img src="https://picsum.photos/300/150?random=38">
+    </div>
+  </section>
+
+  <footer class="footer">Task 36-40 Complete | Grid Project | 2026</footer>
+</div>
+
+</body>
+</html>

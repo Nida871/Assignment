@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<style>
+  .broken-box {
+    width: 300px;
+    border: 2px solid red;
+    padding: 10px;
+    margin: 20px auto;
+  }
+  .fixed-box {
+    width: 300px;
+    border: 2px solid green;
+    padding: 10px;
+    margin: 20px auto;
+    /* FIX - ye 2 line magic hai */
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+<h2 style="text-align:center;">Task 28 - Overflow Fix</h2>
+
+<h3>Before Fix (Broken):</h3>
+<div class="broken-box">
+  yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+  this text will overflow and break the layout
+</div>
+
+<h3>After Fix (Fixed):</h3>
+<div class="fixed-box">
+  yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+  now this text will stay inside and will not overflow! Fixed
+</div>
+
+<p style="text-align:center;">
+  <b>Fix:</b> overflow-wrap: break-word; + box-sizing: border-box; + max-width: 100%;
+</p>
+
+</body>
+</html>

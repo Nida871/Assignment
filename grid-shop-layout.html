@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial; }
+  .layout {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+      "header header"
+      "sidebar products";
+  }
+  .header {
+    grid-area: header;
+    background: #4a6cf7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .sidebar {
+    grid-area: sidebar;
+    background: #1a1a2e;
+    color: white;
+    padding: 20px;
+  }
+  .sidebar h3 { margin-bottom: 15px; }
+  .sidebar li { list-style: none; padding: 10px 0; border-bottom: 1px solid #333; }
+  
+  .products-area {
+    grid-area: products;
+    background: #f5f7ff;
+    padding: 20px;
+  }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  }
+  .product-card img { width:100%; height:120px; object-fit:cover; border-radius:8px; }
+
+  @media (max-width: 700px) {
+    .layout {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "sidebar"
+        "products";
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <header class="header">
+    <b>ShopZone - Task 39</b>
+    <span>🛒 Cart (2)</span>
+  </header>
+
+  <aside class="sidebar">
+    <h3>Categories</h3>
+    <ul>
+      <li>All Products</li>
+      <li>Men</li>
+      <li>Women</li>
+      <li>Electronics</li>
+      <li>Accessories</li>
+    </ul>
+  </aside>
+
+  <main class="products-area">
+    <h2>Products</h2>
+    <div class="products-grid">
+      <div class="product-card"><img src="https://picsum.photos/200/120?random=21"><h4>Shoes</h4><p>₹999</p></div>
+      <div class="product-card"><img src="https://picsum.photos/200/120?random=22"><h4>Watch</h4><p>₹1999</p></div>
+      <div class="product-card"><img src="https://picsum.photos/200/120?random=23"><h4>Bag</h4><p>₹799</p></div>
+      <div class="product-card"><img src="https://picsum.photos/200/120?random=24"><h4>T-Shirt</h4><p>₹499</p></div>
+      <div class="product-card"><img src="https://picsum.photos/200/120?random=25"><h4>Cap</h4><p>₹299</p></div>
+      <div class="product-card"><img src="https://picsum.photos/200/120?random=26"><h4>Headphone</h4><p>₹1499</p></div>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
